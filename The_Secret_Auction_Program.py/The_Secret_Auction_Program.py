@@ -1,5 +1,5 @@
 from replit import clear
-#HINT: You can call clear() to clear the output in the console.only if you are using replit other wise make comment
+#HINT: You can call clear() to clear the output in the console.only if you are using replit other wise make it as comment it will be error
 from art import logo
 print(logo)
 print("Welcome to the secret auction program.")
@@ -18,13 +18,13 @@ while end:
     end = True
   else:
     end = False
-    bid_amount= ()
     highest_bidder = 0
-    # win =""
+    winner =""
     for i in bids:
       bid_amount= bids[i]
   
       if bid_amount > highest_bidder:
         highest_bidder = bid_amount
-        # win = i
-    print(f"The winner is {name} with a bid of ${highest_bidder}")
+        winner = i
+    print(f"The winner is {winner} with a bid of ${highest_bidder}")
+
