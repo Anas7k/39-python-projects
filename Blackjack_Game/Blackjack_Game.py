@@ -75,5 +75,5 @@ def play_game():
   print(compare(user_score, computer_score))
 
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-   clear() # only use if you're using replit
+  clear() # only use if you're using replit
   play_game()
