@@ -40,7 +40,7 @@ def compare(user_score, computer_score):
 
 def play_game():
 
-  # print(logo)
+  print(logo)
 
   user_cards = []
   computer_cards = []
@@ -77,4 +77,3 @@ def play_game():
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
    clear() # only use if you're using replit
   play_game()
-
