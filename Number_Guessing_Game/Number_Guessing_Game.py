@@ -5,7 +5,7 @@ print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
 def numbers():
   random_number = random.randint(1,100)
-  #print(f"Pssst, the correct answer is {random_number}")  # this is the answer You can display it  by removing the "#"
+  #print(f"Pssst, the correct answer is {random_number}")  # this is the answer You can display by removing the "#"
   return random_number
 
 target = numbers()
@@ -22,12 +22,17 @@ while end:
   
   guess = int(input("Make a guess:"))
   
-  if guess < 1 or guess > 100:
-      print("Please guess a number between 1 and 100.")
+  if guess < 1 or guess > 100: # also you can use this for more explanation
+      print("Please guess a number between 1 and 100.") 
       continue
   attempts -= 1
-  if attempts == 0:
+  if attempts == 0 and guess > target:
     end = False
+    print("Too high!")
+    print("You've run out of guesses, you lose.")
+  elif attempts == 0 and guess < target:
+    end = False
+    print("Too low!")
     print("You've run out of guesses, you lose.")
     break
   if guess == target:
