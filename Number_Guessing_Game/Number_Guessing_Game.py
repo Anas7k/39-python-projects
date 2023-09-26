@@ -30,6 +30,7 @@ while end:
     end = False
     print("Too high!")
     print("You've run out of guesses, you lose.")
+    break
   elif attempts == 0 and guess < target:
     end = False
     print("Too low!")
