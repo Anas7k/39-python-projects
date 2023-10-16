@@ -13,7 +13,7 @@ class Paddle(Turtle):
 
     def up(self):
         y = self.ycor()
-        if y < +250:
+        if y < 250:
             y += 20
         self.sety(y)
 
