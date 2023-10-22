@@ -6,7 +6,7 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 25
+WORK_MIN = 1
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
@@ -16,7 +16,7 @@ timer = None
 
 
 def reset_timer():
-    
+
     wd.after_cancel(timer)
     canvas.itemconfig(timer_text, text="00:00")
     title_label.config(text="Timer")
@@ -49,7 +49,7 @@ def start_timer():
 
 
 def count_down(count):
-    
+
     count_min = math.floor(count / 60)  # or you can use this way "int(count / 60) % 60"
     count_sec = count % 60
     canvas.itemconfig(timer_text, text=f"{count_min:02}:{count_sec:02}")
@@ -85,7 +85,7 @@ start_button.grid(column=0, row=2)
 reset_button = Button(text="Reset", highlightthickness=0, command=reset_timer)
 reset_button.grid(column=2, row=2)
 
-check_mark = Label(text="", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
+check_mark = Label(fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
 check_mark.grid(column=1, row=3)
 
 wd.mainloop()
